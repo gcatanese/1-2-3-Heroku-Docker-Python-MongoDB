@@ -12,9 +12,14 @@ def get_user_by_name(name):
 
 
 def add_user(name):
-    new_user = {"name": name}
-    x = db.user.insert_one(new_user)
 
-    return x.inserted_id
+    ret = get_user_by_name(name)
+
+    if ret is None:
+        new_user = {"name": name}
+        x = db.user.insert_one(new_user)
+        ret = x.inserted_id
+
+    return ret
 
 
