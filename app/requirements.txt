@@ -1,6 +1,6 @@
 pymongo==4.0.2
-dnspython==2.1.0
 Flask==2.0.3
+dnspython==2.2.0
 requests==2.27.1
 pyfiglet==0.8.post1
 python-dotenv===0.19.2
